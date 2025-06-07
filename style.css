@@ -1,1 +1,92 @@
+*{
+    margin:0;
+    
+}
+html{
+    height: 100%;
+}
+body{
+    display: grid;
+    grid-template-areas: 
+    "header header "
+    "kont container";
+    grid-template-columns: 1fr 4fr;
+    height: 100%;
+    background-color: #b1d4cd;
+    color: #06202B;
+    min-width: 700px;
+    gap: 16px;
+}
+#header{
+    grid-area: header;
+    height: 300px;
+    background-image: url(pozadina.jpg);
+    background-repeat: no-repeat;
+    background-size: 160% 160%;
+    background-position: -200px 0px;
+    box-shadow: 0px 5px 15px;
+}
+#kontakt img{
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    
+}
+#kontakt{
+    grid-area: kont;
+    background-color: #F5EEDD;
+    margin-left: 40px;
+    
+}
+#kontakt ul{
+    list-style: none;
+    padding-left: 0px;
+}
 
+#kontakt .card{
+    position: relative;
+    top: -150px;
+    background-color: #F5EEDD;
+    min-width: 230px;
+    padding-left: 30px;
+    padding-top: 30px;
+    border-radius: 15% 15% 0 0;
+
+}
+
+.text{
+    color: #1b8b77;
+    font-weight: bold;
+}
+
+.container{
+    padding-top: 40px;
+    grid-area: container;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 350px);
+    gap: 20px;
+    justify-content: space-evenly;
+    
+}
+
+
+.container div h3{
+    background-color: #06202B;
+    color: #F5EEDD;
+    padding: 5px 30px;
+    border-radius: 10px 10px 0px 0px;
+
+}
+.container div p, .container div ul{
+    padding: 20px 40px 40px 40px;
+    font-size: 17px;
+    line-height: 1.3rem;
+    text-align: justify;
+    
+}
+#bio, #obrazovanie, #veshtini{
+    background-color: #F5EEDD;
+    height: 300px;
+    border-radius: 10px 10px;
+    box-shadow: -5px 5px 15px;
+}
