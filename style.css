@@ -19,7 +19,7 @@ body{
 }
 #header{
     grid-area: header;
-    height: 300px;
+    height: 45vh;
     background-image: url(pozadina.jpg);
     background-repeat: no-repeat;
     background-size: 160% 160%;
