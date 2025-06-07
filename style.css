@@ -19,7 +19,7 @@ body{
 }
 #header{
     grid-area: header;
-    height: 300px;
+    height: 20vw;
     background-image: url(pozadina.jpg);
     background-repeat: no-repeat;
     background-size: 160% 160%;
@@ -63,7 +63,7 @@ body{
     padding-top: 40px;
     grid-area: container;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 350px);
+    grid-template-columns: repeat(auto-fit, max(22vw,350px));
     gap: 20px;
     justify-content: space-evenly;
     
