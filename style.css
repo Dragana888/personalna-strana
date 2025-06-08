@@ -88,7 +88,7 @@ body{
 }
 #bio, #obrazovanie, #veshtini{
     background-color: #F5EEDD;
-    height: 300px;
+    margin-bottom: 10px;
     border-radius: 10px 10px;
     box-shadow: -5px 5px 15px;
 }
@@ -114,15 +114,17 @@ body{
     }
     
     #kontakt{
-       width: 80vw;
-       margin-left: 11vw;
+       width: 77vw;
+       margin-left: 9vw;
        
     }
-
+    #kontakt img{
+        margin-left: 30%;
+    }
     #kontakt .card{
         min-width: 0;
         width: 60%;
-        padding-left: 30%;
+        
         position: static;
         top: auto;
 
