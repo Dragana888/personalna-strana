@@ -103,7 +103,7 @@ body{
             "container"
             "kont";
         grid-template-columns: 100%;
-        
+        min-width: none;
         height: 100%;
     }
     .container{
