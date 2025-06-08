@@ -19,7 +19,7 @@ body{
 }
 #header{
     grid-area: header;
-    height: 60vh;
+    height: 45vh;
     background-image: url(pozadina.jpg);
     background-repeat: no-repeat;
     background-size: 160% 160%;
@@ -45,7 +45,7 @@ body{
 
 #kontakt .card{
     position: relative;
-    top: -150px;
+    top: -20vh;
     background-color: #F5EEDD;
     min-width: 230px;
     padding-left: 30px;
@@ -63,7 +63,7 @@ body{
     padding-top: 40px;
     grid-area: container;
     display: grid;
-    grid-template-columns: repeat(auto-fit, max(22vw,350px));
+    grid-template-columns: repeat(auto-fit, max(24vw,350px));
     gap: 20px;
     justify-content: space-evenly;
     
