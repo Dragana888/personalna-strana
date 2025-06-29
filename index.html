@@ -8,51 +8,95 @@
     </head>
     <body>
         <div id="header">
-            
+            <img id="profile" src="profile.jpg" alt="">
         </div>
         <div id="kontakt">
             <div class="card">
-                <img src="profile.jpg" alt="">
                 <h3>Контакт</h1>
                 <ul>
-                    <li>Email: <span class="text">da243086@students.finki.ukim.mk</span></li>
-                    <li>LinkedIn: <span class="text">draganaandonovska</span> </li>
-                    <li>075-111-111</li>
+                    <div id="icons">
+                        <a id="email" href="mailto:da243086@students.finki.ukim.mk"><img id="email" src="email.png" alt=""></a>
+                        <a  href="" title="Nema..."><img id="linkedin" src="linkedin.png" alt=""></a>
+                        <a href="tel:075922044" title="075922044"><img id="tel" src="telephone.png" alt=""></a>
+                    </div>
+                    
                 </ul>
             </div>
             
         </div>
-        <div class="container">
-            <div id="bio">
+        <div class="container" >
+            <div id="bio" class="expandable">
                 <h3>Биографија</h3>
-                 <p> Родена сум во <span class="text">2005</span> во Куманово. 
-                    Моментално сум студент на Факултет за Информатички Науки и Компјутерско Инжинерство, 
-                    со желба за создавање <span class="text">веб страни</span> и <span class="text">апликации</span>. 
-                    Имам способност да се прилагодам во разни ситуации и со добра организација и тимска работа секогаш
-                    го испочитувам секој рок.
-                </p>
+                <div >
+                    <p class="data-expand-text"> Родена сум во <span class="text">2005</span> во Куманово. 
+                        Моментално сум студент на Факултет за Информатички Науки и Компјутерско Инжинерство, 
+                        со желба за создавање <span class="text">веб страни</span> и <span class="text">апликации</span>. 
+                        Имам желба да се унапредувам во областа на информатика и имам отворен пристап
+                        кон работа со нови технологии. Комуникативна личност сум со позитивен пристап кон луѓето кои
+                        ме опкружуваат. Со задоволство пружам помош на оние кои им е потребно. Дисциплинирана сум и
+                        имам солидни организациски способности. Имам способност да се прилагодам во разни ситуации и 
+                        со добра организација и тимска работа секогаш го испочитувам секој рок.
+                    </p>
+                    <button class="data-expand-button">Read More</button>
+                </div>
+                 
             </div>
-            <div id="obrazovanie">
+            <div id="obrazovanie" class="expandable">
                 <h3>Образование</h3>
-                <p>
-                    Осносвно завршив во Браќа Миладиновци во Куманово, а средно во Математичко Информатичка 
-                    Гимназија каде што имав учествувано на натпревари по математика, информатика и англиски
-                    јазик. Имам изработени <span class="text">веб апликација за е-продавница</span> како матурски
-                    проект. Моментално студирам на Факултет за Информатички Науки и Компјутерско Инжинерство, на
-                    смерот <span class="text">ПИТ</span>.
-                </p>
+                <div >
+                    <p class="data-expand-text">
+                        Осносвно завршив во Браќа Миладиновци во Куманово, а средно во Математичко Информатичка 
+                        Гимназија каде што имав учествувано на натпревари по математика, информатика и англиски
+                        јазик. Имам изработени <span class="text">веб апликација за е-продавница</span> како матурски
+                        проект. Моментално студирам на Факултет за Информатички Науки и Компјутерско Инжинерство, на
+                        смерот <span class="text">ПИТ</span>.
+                    </p>
+                    <button class="data-expand-button">Read More</button>
+                </div>
+                
             </div>
-            <div id="veshtini">
+            <div id="veshtini" class="expandable">
                 <h3>Вештини</h3>
-                <ul>
-                    <li>Чисто зборувам <span class="text">македонски</span> и <span class="text">англиски</span> </li>
-                    <li>Одлично познавање на <span class="text">C++</span>, <span class="text">HTML</span> и <span class="text">CSS</span></li>
-                    <li>Основно познавање на <span class="text">python</span> </li>
-                    <li>Основно познавање на уредување слики</li>
-                </ul>
+                <div >
+                    <ul >
+                        <li>Чисто зборувам <span class="text">македонски</span> и <span class="text">англиски</span> </li>
+                        <li>Одлично познавање на <span class="text">C++</span>, <span class="text">HTML</span> и <span class="text">CSS</span></li>
+                        <li>Основно познавање на <span class="text">python</span> </li>
+                        <li>Основно познавање на уредување слики</li>
+                    </ul>
+                    
+                </div>
+                
             </div>
         </div>
-        
+        <footer>
+            <div id="credits">
+                <a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by Pixel perfect - Flaticon</a> <br>
+                <a href="https://www.flaticon.com/free-icons/mail" title="mail icons">Mail icons created by Dave Gandy - Flaticon</a> <br>
+                <a href="https://www.flaticon.com/free-icons/phone" title="phone icons">Phone icons created by Dave Gandy - Flaticon</a> <br>
+            </div>
+        </footer>
         
     </body>
+    <script>
+        const expandableButtons = document.querySelectorAll(".data-expand-button");
+
+        expandableButtons.forEach(button => {
+            button.addEventListener("click", toggleText);
+            setExpandButtonText(button);
+        });
+
+        function toggleText(e) {
+            const expandableElement = e.target.closest(".expandable");
+            expandableElement.classList.toggle("expanded");
+            setExpandButtonText(e.target);
+        }
+
+        function setExpandButtonText(button) {
+            const expandableElement = button.closest(".expandable");
+            const expanded = expandableElement.classList.contains("expanded");
+            button.innerText = expanded ? "Read Less" : "Read More";
+        }
+
+    </script>
 </html>
