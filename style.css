@@ -194,7 +194,8 @@ footer{
         grid-template-areas: 
             "header"
             "container"
-            "kont";
+            "kont"
+            "footer";
         grid-template-columns: 100%;
         min-width: 100%;
         height: 100%;
